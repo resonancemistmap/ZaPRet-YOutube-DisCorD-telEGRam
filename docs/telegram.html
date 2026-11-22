@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegram Web и Telegram Desktop — инструкция</title>
+<meta name="description" content="Обновление hosts для Telegram Web, ограничения Telegram Desktop и отдельные варианты прокси из документации Discord Zapret.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://juniorclient.github.io/discordzapret/telegram.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Telegram Web и Telegram Desktop — инструкция">
+<meta property="og:description" content="Обновление hosts для Telegram Web, ограничения Telegram Desktop и отдельные варианты прокси из документации Discord Zapret.">
+<meta property="og:url" content="https://juniorclient.github.io/discordzapret/telegram.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Telegram Web и Telegram Desktop — инструкция","url":"https://juniorclient.github.io/discordzapret/telegram.html","description":"Обновление hosts для Telegram Web, ограничения Telegram Desktop и отдельные варианты прокси из документации Discord Zapret.","inLanguage":"ru-RU","isPartOf":{"@type":"WebSite","url":"https://juniorclient.github.io/discordzapret/","name":"Discord Zapret — документация"}}</script>
+<style>body{max-width:900px;margin:0 auto;padding:24px 18px 64px;font:16px/1.65 system-ui,Segoe UI,Arial,sans-serif;color:#20252b}h1{line-height:1.25}h2{margin-top:2rem}a{color:#0969da}nav,.meta{color:#59636e;font-size:.94rem}nav{border-bottom:1px solid #d0d7de;padding-bottom:.7rem;margin-bottom:2rem}pre{overflow:auto;background:#f6f8fa;padding:1rem;border-radius:8px}code{background:#f6f8fa;padding:.12em .28em;border-radius:4px}table{border-collapse:collapse}td,th{border:1px solid #d0d7de;padding:.45rem}hr{margin-top:2rem}</style>
+</head>
+<body>
+<nav aria-label="Документация"><p><a href="./">Главная</a> · <a href="faq.html">FAQ</a> · <a href="install.html">Установка</a> · <a href="troubleshooting.html">Диагностика</a> · <a href="youtube.html">YouTube</a> · <a href="telegram.html">Telegram</a> · <a href="changelog.html">Изменения</a></p></nav>
+<main>
+<h1>Telegram Zapret: Telegram Web, Telegram Desktop и hosts</h1>
+<p>Важно различать Telegram Web и Telegram Desktop. В исходном README для них описаны разные способы решения проблем. Эта сборка не является универсальным Telegram-прокси и не гарантирует работу Telegram Desktop.</p>
+<h2>Telegram Web: обновление hosts</h2>
+<p>В README указана такая последовательность:</p>
+<ol>
+<li>Распакуйте архив и откройте <code>service.bat</code>.</li>
+<li>Выберите <code>Update Hosts File</code>.</li>
+<li>Если содержимое hosts требует ручного обновления, скопируйте текст, который показала утилита.</li>
+<li>Откройте системный файл hosts в текстовом редакторе, запущенном от имени администратора.</li>
+<li>Добавьте скопированные строки в конец файла либо замените устаревшие строки, если вы ранее применяли аналогичную настройку.</li>
+<li>Сохраните файл и повторно проверьте Telegram Web. Убедитесь, что изменения действительно записались.</li>
+</ol>
+<p>Если Telegram Web по-прежнему не подключается, проверьте, что файл hosts сохранён с административными правами и не содержит конфликтующих старых записей. Не скачивайте готовые hosts-файлы из неизвестных источников.</p>
+<h2>Telegram Desktop: отдельный прокси</h2>
+<p>В исходном README прямо сказано, что работа Telegram Desktop через эту сборку не гарантируется. В качестве альтернативы указаны:</p>
+<ul>
+<li><a href="https://github.com/Flowseal/tg-ws-proxy">Flowseal/tg-ws-proxy</a> — отдельный локальный прокси-проект.</li>
+<li>MTProto-прокси — отдельный способ подключения, который пользователь выбирает и проверяет самостоятельно.</li>
+</ul>
+<p>Эти инструменты не входят в данный архив и не должны описываться как встроенная функция <code>JuniorClient/discordzapret</code>. Проверяйте источник и доверяйте только известным провайдерам прокси.</p>
+<h2>Telegram и голосовой чат Discord</h2>
+<p>В README описан общий сценарий <code>service.bat</code> → <code>Update Hosts File</code> для Telegram Web и ситуации, когда Discord Voice застревает на подключении. Если проблема сохраняется, проверьте Discord в браузере, очистку кэша через <code>Run Diagnostics</code> и другую стратегию.</p>
+<h2>Поисковые темы и формулировки</h2>
+<p>Эта инструкция охватывает: Telegram Web Windows, Telegram не подключается, Telegram Web не открывается, Telegram hosts Windows, Update Hosts File, service.bat hosts, Telegram Desktop proxy, tg-ws-proxy, MTProto proxy, Discord Voice Connecting, голосовой чат Discord не подключается. Наличие этих тем не означает, что Telegram Desktop-прокси включён в архив.</p>
+<h2>Полезные ссылки</h2>
+<ul>
+<li><a href="https://github.com/JuniorClient/discordzapret">Репозиторий JuniorClient/discordzapret</a></li>
+<li><a href="https://github.com/JuniorClient/discordzapret/releases/latest">Последний релиз</a></li>
+<li><a href="https://github.com/Flowseal/tg-ws-proxy">tg-ws-proxy</a></li>
+<li><a href="INSTALL.md">Установка</a> · <a href="TROUBLESHOOTING.md">Диагностика</a> · <a href="FAQ.md">FAQ</a></li>
+</ul>
+<p>#TelegramZapret #TelegramWeb #TelegramDesktop #TGWSProxy #MTProto #DiscordZapret #ZapretDiscord</p>
+
+</main>
+<hr><p><a href="https://github.com/JuniorClient/discordzapret">Оригинальный репозиторий GitHub</a> · <a href="https://github.com/JuniorClient/discordzapret/releases/latest">Последний релиз</a> · <a href="https://github.com/JuniorClient/discordzapret/blob/main/TELEGRAM.md">Исходник Markdown в GitHub</a></p>
+<p class="meta">Материалы относятся к репозиторию JuniorClient/discordzapret. Совместимость сетевых стратегий зависит от условий подключения.</p>
+</body>
+</html>

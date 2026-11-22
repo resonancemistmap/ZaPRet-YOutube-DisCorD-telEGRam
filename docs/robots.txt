@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+Sitemap: https://juniorclient.github.io/discordzapret/sitemap.xml

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discord Zapret — диагностика и решение проблем</title>
+<meta name="description" content="Диагностика ошибок Discord Connecting, YouTube, Telegram Web, WinDivert, Secure DNS, IPSet Filter и стратегий zapret.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://juniorclient.github.io/discordzapret/troubleshooting.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Discord Zapret — диагностика и решение проблем">
+<meta property="og:description" content="Диагностика ошибок Discord Connecting, YouTube, Telegram Web, WinDivert, Secure DNS, IPSet Filter и стратегий zapret.">
+<meta property="og:url" content="https://juniorclient.github.io/discordzapret/troubleshooting.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Discord Zapret — диагностика и решение проблем","url":"https://juniorclient.github.io/discordzapret/troubleshooting.html","description":"Диагностика ошибок Discord Connecting, YouTube, Telegram Web, WinDivert, Secure DNS, IPSet Filter и стратегий zapret.","inLanguage":"ru-RU","isPartOf":{"@type":"WebSite","url":"https://juniorclient.github.io/discordzapret/","name":"Discord Zapret — документация"}}</script>
+<style>body{max-width:900px;margin:0 auto;padding:24px 18px 64px;font:16px/1.65 system-ui,Segoe UI,Arial,sans-serif;color:#20252b}h1{line-height:1.25}h2{margin-top:2rem}a{color:#0969da}nav,.meta{color:#59636e;font-size:.94rem}nav{border-bottom:1px solid #d0d7de;padding-bottom:.7rem;margin-bottom:2rem}pre{overflow:auto;background:#f6f8fa;padding:1rem;border-radius:8px}code{background:#f6f8fa;padding:.12em .28em;border-radius:4px}table{border-collapse:collapse}td,th{border:1px solid #d0d7de;padding:.45rem}hr{margin-top:2rem}</style>
+</head>
+<body>
+<nav aria-label="Документация"><p><a href="./">Главная</a> · <a href="faq.html">FAQ</a> · <a href="install.html">Установка</a> · <a href="troubleshooting.html">Диагностика</a> · <a href="youtube.html">YouTube</a> · <a href="telegram.html">Telegram</a> · <a href="changelog.html">Изменения</a></p></nav>
+<main>
+<h1>Discord Zapret: решение проблем и диагностика</h1>
+<p>Руководство составлено по инструкциям в репозитории <a href="https://github.com/JuniorClient/discordzapret">JuniorClient/discordzapret</a>. Проверяйте стратегии по одной и сравнивайте результат. После изменения фильтров перезапускайте выбранную стратегию.</p>
+<h2>1. После запуска general*.bat ничего не происходит</h2>
+<ul>
+<li>Проверьте, появился ли процесс <code>winws.exe</code> в списке процессов/системной области.</li>
+<li>Запустите <code>service.bat</code> → <code>Run Diagnostics</code>.</li>
+<li>Выполните <code>Run Tests</code> и проверьте другие стратегии.</li>
+<li>Если окно сразу закрывается, запустите файл из командной строки, чтобы увидеть сообщения об ошибке.</li>
+</ul>
+<h2>2. Ни одна стратегия не подходит</h2>
+<ol>
+<li>Проверьте Secure DNS.</li>
+<li>Запустите <code>service.bat</code> → <code>Run Diagnostics</code>.</li>
+<li>Убедитесь, что домен/адрес, который вы проверяете, включён в список целей или соответствующий список доменов/IP.</li>
+<li>Попробуйте другие стратегии, например варианты ALT и FAKE.</li>
+<li>Если сохраняется системная сетевая проблема, исходный README предлагает сетевой сброс. Выполняйте его только из командной строки администратора и после сохранения индивидуальных сетевых настроек:</li>
+</ol>
+<pre><code class="language-cmd">netsh winsock reset
+netsh int ip reset all
+netsh winhttp reset proxy
+ipconfig /flushdns
+</code></pre>
+<p>После команд перезагрузите компьютер. Сброс может затронуть пользовательские сетевые настройки и прокси.</p>
+<h2>3. Discord не подключается или голосовой чат остаётся на Connecting</h2>
+<ul>
+<li>Проверьте Secure DNS.</li>
+<li>Проверьте веб-версию: <a href="https://discord.com/app">https://discord.com/app</a>.</li>
+<li>Запустите <code>service.bat</code> → <code>Run Diagnostics</code> и выполните очистку кэша Discord, если такой пункт предлагается.</li>
+<li>Проверьте другую стратегию: одна и та же конфигурация может по-разному работать для YouTube и Discord.</li>
+<li>Для бесконечного подключения к голосовому чату проверьте раздел <a href="TELEGRAM.md">Update Hosts File</a>.</li>
+</ul>
+<h2>4. YouTube не открывается или медленно загружается</h2>
+<ul>
+<li>Убедитесь, что настроен Secure DNS.</li>
+<li>Временно проверьте работу без блокировщика рекламы как диагностический тест.</li>
+<li>Попробуйте другие стратегии.</li>
+<li>См. <a href="YOUTUBE.md">отдельный материал про YouTube</a>.</li>
+</ul>
+<h2>5. Telegram Web не подключается</h2>
+<ul>
+<li>Откройте <code>service.bat</code> → <code>Update Hosts File</code>.</li>
+<li>Если утилита предлагает обновить hosts вручную, скопируйте показанный текст.</li>
+<li>Откройте файл hosts в текстовом редакторе, запущенном от имени администратора, добавьте или замените соответствующие строки и сохраните файл.</li>
+<li>Подробности — в <a href="TELEGRAM.md">TELEGRAM.md</a>.</li>
+</ul>
+<h2>6. Telegram Desktop не работает</h2>
+<p>Работа Telegram Desktop в этой сборке не гарантируется. README предлагает использовать отдельный локальный прокси <a href="https://github.com/Flowseal/tg-ws-proxy">tg-ws-proxy</a> или MTProto-прокси. Это отдельные инструменты, не встроенная функция данного архива.</p>
+<h2>7. Игра или приложение перестали работать</h2>
+<ul>
+<li>Проверьте <code>Game Filter</code> и <code>IPSet Filter</code> в <code>service.bat</code>.</li>
+<li>Для диагностики начните с более ограниченного режима. В README предупреждается, что <code>IPSet Filter = any</code> может вызвать проблемы с открытием многих сайтов; не оставляйте его включённым без необходимости.</li>
+<li>После изменения режима перезапустите стратегию.</li>
+</ul>
+<h2>8. Антивирус сообщает о WinDivert</h2>
+<p>README объясняет, что WinDivert используется для перехвата и фильтрации трафика и может классифицироваться некоторыми антивирусами как RiskTool/PUA. Скачивайте архив только из проверенного репозитория. Не отключайте антивирус целиком ради запуска неизвестной сборки.</p>
+<h2>9. WinDivert остался в службах после удаления</h2>
+<p>Исходная инструкция предлагает выяснить имя службы в командной строке администратора:</p>
+<pre><code class="language-cmd">driverquery | find &quot;Divert&quot;
+</code></pre>
+<p>Только после проверки точного имени можно остановить и удалить найденную службу:</p>
+<pre><code class="language-cmd">sc stop ИМЯ_НАЙДЕННОЙ_СЛУЖБЫ
+sc delete ИМЯ_НАЙДЕННОЙ_СЛУЖБЫ
+</code></pre>
+<p>Не копируйте команды с выдуманным именем.</p>
+<h2>10. Когда нужна чистая переустановка</h2>
+<p>Сохраните собственные списки и настройки, удалите службу через <code>service.bat</code> → <code>Remove Services</code>, выполните диагностику, удалите старую папку, скачайте архив из <a href="https://github.com/JuniorClient/discordzapret/releases/latest">последнего релиза</a> и распакуйте его в новый простой путь без кириллицы и специальных символов. Затем проверьте стратегии заново.</p>
+<h2>Куда сообщить об ошибке</h2>
+<p>Откройте <a href="https://github.com/JuniorClient/discordzapret/issues">Issues</a> или <a href="https://github.com/JuniorClient/discordzapret/discussions">Discussions</a>. Укажите версию Windows, тип сети, выбранную стратегию, какой сервис не работает и результат диагностики. Не прикладывайте пароли, токены и персональные данные.</p>
+
+</main>
+<hr><p><a href="https://github.com/JuniorClient/discordzapret">Оригинальный репозиторий GitHub</a> · <a href="https://github.com/JuniorClient/discordzapret/releases/latest">Последний релиз</a> · <a href="https://github.com/JuniorClient/discordzapret/blob/main/TROUBLESHOOTING.md">Исходник Markdown в GitHub</a></p>
+<p class="meta">Материалы относятся к репозиторию JuniorClient/discordzapret. Совместимость сетевых стратегий зависит от условий подключения.</p>
+</body>
+</html>

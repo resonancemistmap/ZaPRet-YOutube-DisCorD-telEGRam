@@ -1,0 +1,33 @@
+# Discord Zapret — documentation
+
+This GitHub Pages project contains documentation for the Windows zapret bundle in https://github.com/JuniorClient/discordzapret.
+
+- Main repository: https://github.com/JuniorClient/discordzapret
+- Latest release: https://github.com/JuniorClient/discordzapret/releases/latest
+- Release tag described in this package: 1.10.4
+- Platform described by the repository: Windows 10 and Windows 11
+- Main topic: Discord Zapret / Zapret Discord
+- Other documented topics: YouTube strategies and Telegram Web hosts update
+- Telegram Desktop: not guaranteed by this bundle; README points to a separate proxy such as https://github.com/Flowseal/tg-ws-proxy
+
+## Pages
+
+- Home: https://juniorclient.github.io/discordzapret/
+- FAQ (50 questions): https://juniorclient.github.io/discordzapret/faq.html
+- Installation: https://juniorclient.github.io/discordzapret/install.html
+- Troubleshooting: https://juniorclient.github.io/discordzapret/troubleshooting.html
+- YouTube: https://juniorclient.github.io/discordzapret/youtube.html
+- Telegram: https://juniorclient.github.io/discordzapret/telegram.html
+- Changelog: https://juniorclient.github.io/discordzapret/changelog.html
+- Sitemap: https://juniorclient.github.io/discordzapret/sitemap.xml
+
+## Source Markdown in GitHub
+
+- FAQ: https://github.com/JuniorClient/discordzapret/blob/main/FAQ.md
+- Installation: https://github.com/JuniorClient/discordzapret/blob/main/INSTALL.md
+- Troubleshooting: https://github.com/JuniorClient/discordzapret/blob/main/TROUBLESHOOTING.md
+- YouTube: https://github.com/JuniorClient/discordzapret/blob/main/YOUTUBE.md
+- Telegram: https://github.com/JuniorClient/discordzapret/blob/main/TELEGRAM.md
+- Changelog: https://github.com/JuniorClient/discordzapret/blob/main/CHANGELOG.md
+
+The project is not an official Discord, YouTube, or Telegram product. The bundle is not a VPN. Network strategy compatibility varies and is not guaranteed.

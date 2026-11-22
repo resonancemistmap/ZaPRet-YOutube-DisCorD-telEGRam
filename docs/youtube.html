@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube Zapret — настройка и решение проблем</title>
+<meta name="description" content="Как проверить Secure DNS и стратегии zapret, если YouTube не открывается или медленно загружается в Windows.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://juniorclient.github.io/discordzapret/youtube.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="YouTube Zapret — настройка и решение проблем">
+<meta property="og:description" content="Как проверить Secure DNS и стратегии zapret, если YouTube не открывается или медленно загружается в Windows.">
+<meta property="og:url" content="https://juniorclient.github.io/discordzapret/youtube.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"YouTube Zapret — настройка и решение проблем","url":"https://juniorclient.github.io/discordzapret/youtube.html","description":"Как проверить Secure DNS и стратегии zapret, если YouTube не открывается или медленно загружается в Windows.","inLanguage":"ru-RU","isPartOf":{"@type":"WebSite","url":"https://juniorclient.github.io/discordzapret/","name":"Discord Zapret — документация"}}</script>
+<style>body{max-width:900px;margin:0 auto;padding:24px 18px 64px;font:16px/1.65 system-ui,Segoe UI,Arial,sans-serif;color:#20252b}h1{line-height:1.25}h2{margin-top:2rem}a{color:#0969da}nav,.meta{color:#59636e;font-size:.94rem}nav{border-bottom:1px solid #d0d7de;padding-bottom:.7rem;margin-bottom:2rem}pre{overflow:auto;background:#f6f8fa;padding:1rem;border-radius:8px}code{background:#f6f8fa;padding:.12em .28em;border-radius:4px}table{border-collapse:collapse}td,th{border:1px solid #d0d7de;padding:.45rem}hr{margin-top:2rem}</style>
+</head>
+<body>
+<nav aria-label="Документация"><p><a href="./">Главная</a> · <a href="faq.html">FAQ</a> · <a href="install.html">Установка</a> · <a href="troubleshooting.html">Диагностика</a> · <a href="youtube.html">YouTube</a> · <a href="telegram.html">Telegram</a> · <a href="changelog.html">Изменения</a></p></nav>
+<main>
+<h1>YouTube Zapret: настройка и решение проблем с загрузкой YouTube</h1>
+<p>В репозитории <a href="https://github.com/JuniorClient/discordzapret">JuniorClient/discordzapret</a> есть стратегии zapret, которые можно проверить при сетевых проблемах с YouTube. Это не отдельное приложение YouTube, не браузерное расширение и не гарантия обхода замедления. В исходном README предлагается включить Secure DNS и протестировать другие стратегии.</p>
+<h2>Перед тестированием YouTube</h2>
+<ol>
+<li>Настройте Secure DNS в используемом браузере или Windows. Примеры настройки Chrome и Firefox приведены в <a href="INSTALL.md">INSTALL.md</a>.</li>
+<li>Откройте <code>service.bat</code> → <code>Run Tests</code> → <code>Standard tests</code>, если этот пункт доступен в вашей версии.</li>
+<li>Проверьте несколько стратегий <code>general*.bat</code>. Одна конфигурация может работать с YouTube, но не подходить для Discord или других сервисов.</li>
+</ol>
+<h2>Если YouTube не открывается</h2>
+<ul>
+<li>Проверьте, что Secure DNS включён и выбранный DNS-провайдер доступен из вашей сети.</li>
+<li>Временно отключите блокировщик рекламы только на время диагностической проверки. Если поведение не меняется, верните прежние настройки защиты.</li>
+<li>Попробуйте другие стратегии и сравните результат.</li>
+<li>Запустите <code>service.bat</code> → <code>Run Diagnostics</code> и проверьте сообщения диагностики.</li>
+</ul>
+<h2>Если YouTube тормозит, но сайт открывается</h2>
+<p>Проверьте, одинаково ли ведут себя главная страница, поиск и воспроизведение видео. Не делайте вывод о работе стратегии по одной странице. Сравнивайте результаты на одной сети и в одинаковых условиях.</p>
+<h2>Связь YouTube и Discord</h2>
+<p>README рекомендует сначала определить стратегию, на которой открывается YouTube, и затем проверить Discord с этой конфигурацией. При этом прямо предупреждается: стратегия, работающая для YouTube, может не работать для Discord. Поэтому каждый сервис проверяйте отдельно.</p>
+<h2>Поисковые темы и формулировки</h2>
+<p>Материал относится к запросам: YouTube Zapret, Zapret YouTube, YouTube не загружается, YouTube медленно загружается, YouTube тормозит, YouTube Windows 10, YouTube Windows 11, Secure DNS для YouTube, настройка DNS over HTTPS, стратегии zapret для YouTube, проверка YouTube после запуска zapret. Эти формулировки описывают содержание инструкции и не означают гарантированную совместимость.</p>
+<h2>Обсуждение и дополнительные инструкции</h2>
+<ul>
+<li><a href="https://github.com/JuniorClient/discordzapret">Репозиторий GitHub</a></li>
+<li><a href="https://github.com/JuniorClient/discordzapret/releases/latest">Последний релиз</a></li>
+<li><a href="FAQ.md">FAQ</a> · <a href="INSTALL.md">Установка</a> · <a href="TROUBLESHOOTING.md">Диагностика</a></li>
+<li><a href="https://github.com/JuniorClient/discordzapret/discussions/251">Обсуждение проблем YouTube</a></li>
+</ul>
+<p>#YouTubeZapret #ZapretYouTube #YouTubeWindows #SecureDNS #Zapret #Windows11</p>
+
+</main>
+<hr><p><a href="https://github.com/JuniorClient/discordzapret">Оригинальный репозиторий GitHub</a> · <a href="https://github.com/JuniorClient/discordzapret/releases/latest">Последний релиз</a> · <a href="https://github.com/JuniorClient/discordzapret/blob/main/YOUTUBE.md">Исходник Markdown в GitHub</a></p>
+<p class="meta">Материалы относятся к репозиторию JuniorClient/discordzapret. Совместимость сетевых стратегий зависит от условий подключения.</p>
+</body>
+</html>
